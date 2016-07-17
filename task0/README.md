@@ -3,7 +3,7 @@ Aufgabe 0: Aller Anfang mit Git
 
 In dieser Aufgabe sollt ihr erstmal dieses Repository klonen und die ersten Schritte mit Git wagen. Es ist auch eher ein Tutorial, als eine Aufgabe, also keine Sorge ;-)
 
-Bevor ihr hier loslegt solltet ihr auf jeden Fall die Anleitung [Git einrichten](https://github.com/OsnaCS/cgp-2016/wiki/Git-einrichten) gelesen und ausgeführt haben. Fertig? Dann passt jetzt gut auf, denn das selbe müsst ihr später nochmal für das richtige Projektrepository machen (ich werde natürlich diese Datei nicht löschen, also ihr braucht nichts auswendig zu lernen :P). Los gehts:
+Bevor ihr hier loslegt, solltet ihr auf jeden Fall die Anleitung [Git einrichten](https://github.com/OsnaCS/cgp-2016/wiki/Git-einrichten) gelesen und ausgeführt haben. Fertig? Dann passt jetzt gut auf, denn das selbe müsst ihr später nochmal für das richtige Projektrepository machen (ich werde natürlich diese Datei nicht löschen, also ihr braucht nichts auswendig zu lernen :P). Los gehts:
 
 
 ## 1. Repository forken
@@ -14,7 +14,7 @@ Unterscheidet immer zwischen dem Original-Repo (`github.com/LukasKalbertodt/proj
 ## 2. Klonen und remotes anpassen
 Jetzt ist es an der Zeit euren Fork zu `clone`n, also auf euren PC zu laden. Um das zu tun, braucht ihr die Clone-URL eures Forks, welche ihr auf der Seite eures Repositories auf der rechten Seite findet (Button "Clone or download"). Dort sollte "Clone with SSH" mit einer URL stehen. Falls dort "Clone with HTTPS" steht, fragt einen Tutor oder Sitznachbarn. Die SSH-URL kopiert ihr jetzt in die Zwischenablage.
 
-Arbeitet bitte nur im `/local` Verzeichnis und nicht in eurem Heimatsverzeichnis. Führt dazu folgendes aus (ersetzt den RZ-Kürzel und die URL durch eure gültigen Daten):
+Arbeitet bitte nur im `/local` Verzeichnis und nicht in eurem Heimatsverzeichnis. Führt dazu folgendes aus (ersetzt das RZ-Kürzel und die URL durch eure gültigen Daten):
 ``` bash
 $ cd /local
 $ mkdir wwacker
@@ -42,7 +42,7 @@ Eure Aufgabe ist nun:
 
 Beachtet, dass ihr für alle Aufgaben *erstmal* einen Unterordner mit eurem Namen erstellt. Ich würde in dieser Aufgabe also `task0/lukas_kalbertodt/movie.txt` erstellen. Tatsächlich existiert dieser Ordner (also meine Lösung) schon, sodass ihr dort mal gucken könnt.
 
-Und wie in allen weiteren Aufgaben gehört zu der Aufgabe dazu, dass wir eure Lösung committed und einen PullRequest (PR) stellt. Der grobe Ablauf (diesmal müsst ihr die exakten Befehle selbst herausfinden) ist:
+Und wie in allen weiteren Aufgaben gehört zu der Aufgabe dazu, dass ihr eure Lösung committed und einen PullRequest (PR) stellt. Der grobe Ablauf (diesmal müsst ihr die exakten Befehle selbst herausfinden) ist:
 
 - Fügt die Datei zu git hinzu (Quiz: Welchen Status hatte die Datei vorher? Welchen Status hat sie jetzt?)
 - Erstellt einen Commit (Quiz: Welchen Status hat die Datei jetzt?)
