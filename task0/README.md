@@ -78,6 +78,6 @@ Sobald ihr dann von mir (Lukas) das geheime Signal hört, tut folgendes, um euch
 $ git pull upstream master
 ```
 
-Ihr solltet in der Ausgabe irgendwo "fast forward" sehen: Das sollte dort immer stehen, wenn ihr vom `upstream` pullt!
+Ihr solltet in der Ausgabe irgendwo "fast forward" sehen: Das sollte dort immer stehen, wenn ihr vom `upstream` pullt! Ihr müsst genau den oben genannten Befehl auch immer ausführen, um euch die neu freigeschalteten Aufgaben runterzuladen.
 
 Wartet noch kurz, bis ich die nächste Aufgabe freischalte und dann legt damit los!
