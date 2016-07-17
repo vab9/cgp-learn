@@ -21,10 +21,12 @@ b) Fügt einen weiteren Fall hinzu: Zwischen 0 und 5 Uhr soll "Warum bist du den
 
 Implementiert in `sieve.rs` das Sieb des Eratosthenes. Das funktioniert so:
 
-> Man hält sich eine Liste für alle Zahlen von 2 bis n vor.
-> Für t von 2 bis n:
->   "Streiche" alle Vielfachen von t aus der Liste
-> Alle restlichen Zahlen in der Liste sind nun Primzahlen.
+```
+Man hält sich eine Liste für alle Zahlen von 2 bis n vor.
+Für t von 2 bis n:
+  "Streiche" alle Vielfachen von t aus der Liste
+Alle restlichen Zahlen in der Liste sind nun Primzahlen.
+```
 
 Überlegt euch, welche Datenstruktur ihr verwenden solltet (nehmt die Wörter "Liste" und "streichen" nicht zu ernst). Implementiert dann eine Funktion, die ein `n` gegeben bekommt und den Algorithmus ausführt. Zurückgeben soll die Funktion einen `Vec`, der alle Primzahlen enthällt.
 
