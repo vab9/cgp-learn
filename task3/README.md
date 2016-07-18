@@ -14,7 +14,7 @@ In `groups.rs`: Schreibt eine Funktion `group_letter`, die den Namen einer Prakt
 
 a) In `time.rs`: Schreibt eine Funktion, die abhängig von der Uhrzeit (nur die Stunde ist angegeben) einen Gruß-String zurück gibt. Zwischen 8 und 12 Uhr ist es "Guten Morgen", von 18 bis 22 "Guten Abend" und sonst "Hallo". Der Eingabeparameter der Funktion ist ein `u8`, die anderen Typen müsst ihr euch überlegen.
 
-b) Fügt einen weiteren Fall hinzu: Zwischen 0 und 5 Uhr soll "Warum bist du denn um X Uhr noch wach?" zurückgegebene werden, wobei 'X' die Uhrzeit ist. Das `format!` Macro (ebenfalls aus der Standardbibliothek) könnte hierbei helfen.
+b) Fügt einen weiteren Fall hinzu: Zwischen 0 und 5 Uhr soll "Warum bist du denn um X Uhr noch wach?" zurückgegebene werden, wobei 'X' die gegebene Stunde ist. Das `format!` Macro (ebenfalls aus der Standardbibliothek) könnte hierbei helfen.
 
 
 ### 3.3 Sieb des Eratosthenes
@@ -31,29 +31,9 @@ Alle restlichen Zahlen in der Liste sind nun Primzahlen.
 Überlegt euch, welche Datenstruktur ihr verwenden solltet (nehmt die Wörter "Liste" und "streichen" nicht zu ernst). Implementiert dann eine Funktion, die ein `n` gegeben bekommt und den Algorithmus ausführt. Zurückgeben soll die Funktion einen `Vec`, der alle Primzahlen enthällt.
 
 
-### 3.4 Toller Taschenrechner
+### 3.4 Geometrien
 
-a) Implementiert einen Taschenrechner `calc.rs`, der eine einfache Rechnung über die Kommandozeile einließt und das Ergebnis ausgibt. Die Benutzung soll so aussehen:
-
-```bash
-$ ./calc 3 + 4
-7
-$ ./calc 9 - 8
-1
-$ ./calc peter
-I can't calculate this :(
-$ ./calc 3+4        # this is not valid, parameters need to be space separated
-I can't calculate this :(
-```
-
-An die CLI-Parameter kommt man mit Hilfe von `std::env::args()`. Als Operation ist nur '+' und '-' erlaubt und es gibt immer nur zwei Operanden (d.h. "eine Rechnung").
-
-b) Erweitert das Programm so, dass man beliebig viele Operationen angeben kann. Also ist `$ ./calc 1 + 2 + 3 + 4 + 5 - 10` ein gültiger Aufruf.
-
-
-### 3.5 Geometrien
-
-In dieser Aufgabe geht es darum, ein paar simple Typen zu erstellen, die Methoden besitzen.
+In dieser Aufgabe geht es darum, ein paar simple Typen zu erstellen, die Methoden besitzen (in `geo.rs`).
 
 a) Erstellt einen `Point` Typen, der über die zwei Float-Variablen `x` und `y` verfügt, die beide öffentlich sind. Implementiert:
 
