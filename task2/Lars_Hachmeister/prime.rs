@@ -1,10 +1,13 @@
 fn main() {
-    for i in 1..21 {
-        let a = prime(i);
-        println!("Zahl:{}  Primzahl? {}", i, a)
-
+    let mut a = 0;
+    let mut b = 1;
+    while a < 20 {
+        if prime(b) {
+            println!("{}", b);
+            a = a + 1;
+        }
+        b = b + 1
     }
-
 }
 
 fn prime(a: i32) -> bool {
