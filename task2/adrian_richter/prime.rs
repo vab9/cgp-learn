@@ -14,10 +14,9 @@ fn is_prime(n: u32) -> bool {
     let mut is = true;
     if n == 0 || n == 1 {
         is = false;
-    }
-    else {
+    } else {
         for i in 2..n {
-            if n%i == 0 {
+            if n % i == 0 {
                 is = false;
             }
         }
