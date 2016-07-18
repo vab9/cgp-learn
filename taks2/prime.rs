@@ -2,11 +2,11 @@ fn main() {
 
     let mut cnt = 0;
     let mut n = 0;
-    while cnt <= 20 {
+    while cnt < 20 {
         n += 1;
         if is_prime(n) {
             cnt += 1;
-            println!("{} ist Prim", n);
+            println!("{} : {} ist Prim", cnt, n);
         }
 
 
