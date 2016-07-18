@@ -8,7 +8,6 @@ fn main() {
 }
 
 fn is_prime(input: i32) -> (i32, bool) {
-
     let mut rly_prime = true;
     for i in 2..input {
         if (input % i == 0) {
