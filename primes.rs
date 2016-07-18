@@ -1,6 +1,6 @@
 fn main() {
     let mut z = 1;
-    let mut counter = 2;
+    let mut counter = 1;
     while z < 21 {
         if is_prime(counter) == true {
             println!("{}. Primzahl: {}", z, counter);
