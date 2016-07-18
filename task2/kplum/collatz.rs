@@ -4,7 +4,7 @@ fn main() {
     }
 }
 
-fn collatz(mut n: i32) -> i32 {
+fn collatz(mut n: u32) -> u32 {
     let mut i = 0;
     while n > 1 {
         n = if n % 2 == 0 {
