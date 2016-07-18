@@ -1,14 +1,14 @@
 fn main() {
-    let mut primes = 0;
+    let mut primes = 1;
 
     for i in 2.. {
         let result = prime(i);
 
         if result {
-            println!("{:?} -> {:?}", primes + 1, i);
+            println!("{:?} -> {:?}", primes, i);
             primes += 1;
         }
-        if primes == 20 {
+        if primes > 20 {
             return;
         }
     }
