@@ -1,7 +1,11 @@
 fn main() {
-    for i in 1..21 {
-        let a = is_prime(i);
+    let mut count = 20;
+    let mut iter = 0;
+    while count > 0 {
+        iter = iter + 1;
+        let a = is_prime(iter);
         if a.1 == true {
+            count = count - 1;
             println!("{} is prime!", a.0)
         }
     }
