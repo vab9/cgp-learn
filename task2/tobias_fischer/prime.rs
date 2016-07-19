@@ -1,9 +1,9 @@
 fn main() {
 
-    let mut x = 1;
-    while x < 21 {
+
+    for x in 1..21 {
         println!("{} is prime: {}", x, is_prime(x));
-        x = x + 1;
+
     }
 
 }
@@ -22,7 +22,7 @@ fn is_prime(n: u32) -> bool {
                 return false;
 
             }
-            i = i + 6
+            i += 6;
         }
 
         true
