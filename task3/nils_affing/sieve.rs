@@ -1,5 +1,5 @@
 fn main() {
-    let vec = siev(70);
+    let vec = siev(150);
 
     println!("Ergebnis des Siebs: ");
 
@@ -11,14 +11,18 @@ fn main() {
 fn siev(n: i32) -> Vec<i32> {
     let mut siev = Vec::new();
 
-    'outer: for current in 2..n {
-        for factor in 2..current - 1 {
-            if current % factor == 0 {
-                siev.push(false);
-                continue 'outer;
-            }
-        }
+    for x in 0..n - 2 {
         siev.push(true);
+    }
+    println!("Length: {:?}", siev.len());
+
+    let mut factor = 2;
+    for current in 2..n {
+        while (factor * current - 2 < siev.len() as i32) {
+            siev[(factor * current - 2) as usize] = false;
+            factor += 1;
+        }
+        factor = 2;
     }
 
     let mut result = Vec::new();
