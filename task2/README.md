@@ -1,4 +1,4 @@
-Aufgabe 2: Erste Schritte in Rust
+ Aufgabe 2: Erste Schritte in Rust
 =================================
 
 ### Collatz
