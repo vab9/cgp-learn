@@ -3,7 +3,7 @@ fn main() {
     println!("{}", &p.is_origin());
     let q = Point::new(5.0, 5.0);
     println!("{}", &q.is_origin());
-    println!("{}", &q.distance(&p));
+    println!("{}", distance(&q, &p));
 
     let r = Rectangle::new(p, q);
 }
@@ -25,10 +25,10 @@ impl Point {
     pub fn is_origin(&self) -> bool {
         self.x == 0.0 && self.y == 0.0
     }
+}
 
-    pub fn distance(&self, p: &Point) -> f32 {
-        (((self.x - p.x) * (self.x - p.x)) + ((self.y - p.y) * (self.y - p.y))).sqrt()
-    }
+fn distance(q: &Point, p: &Point) -> f32 {
+    (((q.x - p.x) * (q.x - p.x)) + ((q.y - p.y) * (q.y - p.y))).sqrt()
 }
 
 struct Rectangle {
