@@ -1,6 +1,6 @@
 fn main() {
     let n = 100;
-    let liste = sieb(&vec![true;n]);
+    let liste = sieb(&vec![true; n]);
 
     for i in 0..n {
         if liste[i] {
