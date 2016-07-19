@@ -1,3 +1,4 @@
+// Sieb des Eratosthenes-Methode um Primzahlen zu bestimmen
 fn main() {
     let vec = sieve(100);
     for i in 0..vec.len() {
