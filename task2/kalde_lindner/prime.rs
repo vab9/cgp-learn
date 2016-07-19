@@ -8,16 +8,16 @@ fn main() {
     while prime_n < 20 {
         if is_prime(i) {
             println!("{}. {} is a prime number", prime_n, i);
-            prime_n = prime_n + 1;
+            prime_n += 1;
         }
-        i = i + 1;
+        i += 1;
     }
 }
 
 /// check if prime number.
 ///
 /// Parameter n has to be positive integer, return value is bool.
-fn is_prime(n: i32) -> (bool) {
+fn is_prime(n: i32) -> bool {
     if n <= 1 {
         false
     } else if n <= 3 {
@@ -30,7 +30,7 @@ fn is_prime(n: i32) -> (bool) {
             if n % i == 0 || n % (i + 2) == 0 {
                 return false;
             }
-            i = i + 6;
+            i += 6;
         }
         true
     }
