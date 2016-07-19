@@ -17,7 +17,7 @@ fn prime(a: i32) -> bool {
     for i in 2..c {
         if b % i == 0 {
             return false;
-        };
+        }
     }
     true
 }
