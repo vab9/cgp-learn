@@ -1,12 +1,13 @@
 fn main() {
-    let mut a = 0;
-    let mut b = 1;
-    while a < 20 {
-        if prime(b) {
-            println!("{}", b);
-            a = a + 1;
+    let mut b = 0;
+    for a in 1.. {
+        if prime(a) {
+            println!("{}", a);
+            b += 1;
+            if b == 20 {
+                break;
+            }
         }
-        b = b + 1
     }
 }
 
