@@ -4,13 +4,13 @@ fn main() {
     let mut n = 0;
     while cnt < 20 {
         n += 1;
-        if isprime(n){
+        if is_prime(n){
             cnt += 1;
             println!("{}: {} is prime", cnt, n);
         }
     }
 }
-fn isprime(n: i32) -> bool {
+fn is_prime(n: i32) -> bool {
     // If number is divisible by a number greater than 1 and less than itself
     for i in 2..n/2 + 1 {
         if n % i == 0 {
