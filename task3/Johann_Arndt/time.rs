@@ -3,13 +3,10 @@ fn main() {
 }
 
 fn greeting(time: u8) -> String {
-    if time <= 5 {
-        format!("Warum bist du denn noch um {} Uhr wach", time)
-    } else if time >= 8 && time <= 12 {
-        String::from("Guten Morgen")
-    } else if time >= 18 && time <= 22 {
-        String::from("Guten Abend")
-    } else {
-        String::from("Hallo")
+    match time {
+        0...5 => format!("Warum bist du denn noch um {} Uhr wach", time),
+        8...12 => String::from("Guten Morgen"),
+        18...22 => String::from("Guten Abend"),
+        _ => String::from("Hallo"),
     }
 }
