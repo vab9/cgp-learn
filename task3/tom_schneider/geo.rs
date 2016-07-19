@@ -32,7 +32,7 @@ impl Rectangle {
         let x = self.or.x;
         let y = self.ul.y;
         let t = Point::new(x, y);
-        (((self.ul.distance(&t)).abs()) * (self.or.distance(&t).abs()))
+        self.ul.distance(&t).abs() * self.or.distance(&t).abs()
     }
     pub fn contains(&self, p: &Point) -> bool {
         (p.x >= self.ul.x && p.y >= self.ul.y && p.x <= self.or.x && p.y <= self.or.y)
