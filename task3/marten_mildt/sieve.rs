@@ -1,5 +1,5 @@
 fn main() {
-    let primes: Vec<usize> = sieve(100);
+    let primes = sieve(100);
 
     for p in &primes {
         println!("{}", *p);
@@ -7,8 +7,8 @@ fn main() {
 }
 
 fn sieve(n: usize) -> Vec<usize> {
-    let mut gestrichen: Vec<bool> = Vec::new();
-    let mut primes: Vec<usize> = Vec::new();
+    let mut gestrichen = Vec::new();
+    let mut primes = Vec::new();
 
     for i in 2..(n + 1) {
         gestrichen.push(false);
