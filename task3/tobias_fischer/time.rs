@@ -7,7 +7,7 @@ fn main() {
 
 fn greetings(t: u8) -> String {
     match t {
-        0...5 => format!("Warum bist du denn um {} Uhr noch wach?", t).to_string(),
+        0...5 => format!("Warum bist du denn um {} Uhr noch wach?", t),
         8...12 => "Guten Morgen.".to_string(),
         18...22 => "Guten Abend.".to_string(),
         _ => "Hallo".to_string(),
