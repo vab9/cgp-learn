@@ -5,8 +5,8 @@ struct Point {
 }
 
 impl Point {
-    pub fn new() -> Point {
-        Point::origin()
+    pub fn new(a: f32, b: f32) -> Point {
+        Point { x: a, y: b }
     }
     pub fn origin() -> Point {
         Point { x: 0.0, y: 0.0 }
@@ -23,7 +23,7 @@ impl Point {
 
 fn main() {
 
-    let p1 = Point { x: 10.0, y: 10.0 };
+    let p1 = Point::new(10.0, 10.0);
     let p2 = Point::origin();
     println!("Ist der Punkt im Ursprung? {}", p2.is_origin());
     println!("Die Distance zwischen {:?} und {:?} ist {}",
