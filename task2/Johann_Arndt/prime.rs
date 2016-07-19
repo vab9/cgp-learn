@@ -16,18 +16,16 @@ fn main() {
 
 fn is_prime(n: u32) -> bool {
 
-    let mut i = 1;
-    let mut back = true;
+    let mut i: u32 = 1;
 
-    while i < n / 2 && back == true {
+    while i < (n / 2) && n % (i + 1) != 0 {
         i += 1;
-        back = if n % i != 0 {
-            true
-        } else {
-            false
-        };
-
     }
 
-    back
+    if i < (n / 2) {
+        false
+    } else {
+        true
+    }
+
 }
