@@ -20,10 +20,9 @@ fn is_prime(n: i32) -> bool {
     } else {
         for i in 2..n / 2 {
             if n % i == 0 {
-                isprime = false;
-                break;
+                return false;
             }
         }
-        isprime
+        true
     }
 }
