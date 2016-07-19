@@ -5,7 +5,7 @@ fn main() {
         let result = prime(i);
 
         if result {
-            println!("{:?} -> {:?}", primes, i);
+            println!("{} -> {}", primes, i);
             primes += 1;
         }
         if primes > 20 {
@@ -17,11 +17,11 @@ fn main() {
 
 fn prime(x: i32) -> bool {
 
-    if x % 2 == 0 || x % 3 == 0 {
+    if x % 2 == 0 || x % 3 == 0 || x % 5 == 0 {
         return false;
     }
 
-    let mut i = 5;
+    let mut i = 3;
 
     let limit = (x as f64).sqrt() as i32;
 
