@@ -6,17 +6,18 @@ fn main() {
         n += 1;
         if isprime(n){
             cnt += 1;
-            println!("{}: {} is prime",cnt,n);
+            println!("{}: {} is prime", cnt, n);
         }
     }
 }
 fn isprime(n: i32) -> bool {
-    let mut isprime:bool = true;
-
+    // If number is divisible by a number greater than 1 and less than itself
     for i in 2..n/2 + 1 {
         if n % i == 0 {
-            isprime = false
+            // then return false
+            return false;
         }
     }
-    isprime
+    // Else the number is prime
+    true
 }
