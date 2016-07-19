@@ -5,8 +5,8 @@ fn main() {
     }
 }
 
-fn sieb(n: i32) -> Vec<i32> {
-    let mut v: Vec<i32> = Vec::new();
+fn sieb(n: u32) -> Vec<u32> {
+    let mut v = Vec::new();
     for i in 0..n + 1 {
         v.push(i);
     }
@@ -19,7 +19,7 @@ fn sieb(n: i32) -> Vec<i32> {
             }
         }
     }
-    let mut res: Vec<i32> = Vec::new();
+    let mut res = Vec::new();
     for i in 2..n {
         if v[i as usize] != 0 {
             res.push(v[i as usize]);
@@ -27,18 +27,3 @@ fn sieb(n: i32) -> Vec<i32> {
     }
     res
 }
-
-
-
-
-
-
-//     let mut current = 3;
-//     for i in 2..n{
-//         current = i;
-//         let prime = true;
-//         for j in 2..current-1{
-//             if j * current
-//         }
-//     }
-// }
