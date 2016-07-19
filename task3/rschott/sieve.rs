@@ -1,7 +1,5 @@
 fn main() {
-    let mut v = Vec::new();
-    v = strike(233);
-    for e in v {
+    for e in strike(233) {
         if e != 0 {
             println!("{}", e);
         }
@@ -9,13 +7,13 @@ fn main() {
 
 }
 
-fn strike(n: i32) -> Vec<i32> {
+fn strike(n: u32) -> Vec<u32> {
     let mut v = Vec::new();
     for i in 2..n {
         v.push(i);
     }
     for t in 2..n / 2 {
-        for i in 0..v.len() as i32 {
+        for i in 0..v.len() as u32 {
             if v[i as usize] % t == 0 && t != v[i as usize] {
                 v[i as usize] = 0;
             }
