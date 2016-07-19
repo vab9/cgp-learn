@@ -4,9 +4,9 @@ fn main() {
         println!("{}", b);
     }
 }
-fn sieb(a: i32) -> Vec<i32> {
+fn sieb(a: u32) -> Vec<u32> {
 
-    let mut v: Vec<i32> = Vec::new();
+    let mut v = Vec::new();
 
     for i in 0..a + 1 {
         v.push(i);
@@ -21,7 +21,7 @@ fn sieb(a: i32) -> Vec<i32> {
         }
 
     }
-    let mut res: Vec<i32> = Vec::new();
+    let mut res = Vec::new();
     for i in 2..a {
         if v[i as usize] != 0 {
             res.push(v[i as usize]);
