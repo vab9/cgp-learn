@@ -1,11 +1,10 @@
 fn main() {
     let n = 100;
     let size = n - 2;
-    let mut vec: Vec<u32> = Vec::with_capacity(size);
+    let mut vec = Vec::with_capacity(size);
 
     for i in 2..n {
-        let x = i as u32;
-        vec.push(x);
+        vec.push(i as u32);
     }
     vec = sieve(vec);
     for i in vec {

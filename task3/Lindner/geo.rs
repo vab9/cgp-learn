@@ -1,4 +1,10 @@
-fn main() {}
+fn main() {
+    let pt = Point::new(5.0,2.0);
+
+    println!("is {},{} origin => {}",pt.x, pt.y, pt.is_origin());
+    println!("distance between origin and pt => {}", pt.distance(Point::origin()));
+
+}
 
 struct Point {
     x: f64,
@@ -12,8 +18,8 @@ impl Point {
 
     fn origin() -> Point {
         Point {
-            x: 0.0_f64,
-            y: 0.0_f64,
+            x: 0.0,
+            y: 0.0,
         }
     }
 
@@ -27,10 +33,6 @@ impl Point {
     }
 
     fn distance(&self, p: Point) -> f64 {
-        let a = self.x - p.x;
-        let b = self.y - p.y;
-        a.powi(2);
-        b.powi(2);
-        (a + b).sqrt()
+        ((self.x - p.x).powi(2) + (self.y - p.y).powi(2)).sqrt()
     }
 }

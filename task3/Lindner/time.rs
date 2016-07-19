@@ -1,5 +1,4 @@
 use std::borrow::Cow;
-use std::str;
 fn main() {
     let a = 6;
     let b = 20;
