@@ -1,15 +1,12 @@
 fn main() {
-    println!("{}", get_message_at_time(3u8));
+    println!("{}", get_message_at_time(3));
 }
 
 fn get_message_at_time(time: u8) -> String {
-    if time > 8 && time < 12 {
-        String::from("Guten Morgen")
-    } else if time > 18 && time < 22 {
-        String::from("Guten Abend")
-    } else if time > 0 && time < 5 {
-        String::from(format!("Warum bist du denn um {} Uhr noch wach?", time))
-    } else {
-        String::from("Hallo")
+    match time {
+        8...12 => "Guten Morgen".to_string(),
+        18...22 => "Guten Abend".to_string(),
+        0...5 => format!("Warum bist du denn um {} Uhr noch wach?", time).to_string(),
+        _ => "Hallo".to_string(),
     }
 }

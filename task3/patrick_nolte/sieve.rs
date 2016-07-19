@@ -2,18 +2,17 @@ fn main() {
     println!("{:?}", eratosthenes(40));
 }
 
-fn eratosthenes(n: i32) -> Vec<i32> {
+fn eratosthenes(n: u32) -> Vec<u32> {
     let mut v = Vec::new();
-    for x in 2..n {
-        let mut found = false;
-        for t in 2..x - 1 {
-            if x % t == 0 {
-                found = true;
-                continue;
-            }
-        }
-        if !found {
-            v.push(x);
+    for x in 1..n {
+        v.push(x);
+    }
+    let mut count = 0;
+    while count < v.len() {
+        if v[count as usize] % 2 == 0 {
+            v.remove(count);
+        } else {
+            count += 1;
         }
     }
     v

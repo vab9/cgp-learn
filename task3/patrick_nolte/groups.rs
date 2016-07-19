@@ -1,12 +1,15 @@
 fn main() {
-    println!("{}", group_letter("Plantex"));
+    match group_letter("Plantex") {
+        Ok(n) => println!("Group: {}", n),
+        Err(err) => println!("Error: {}", err),
+    }
 }
 
-fn group_letter(name: &str) -> char {
+fn group_letter(name: &str) -> Result<char, &str> {
     match name {
-        "Plantex" => 'a',
-        "AVZ-Run" => 'b',
-        "Space Game" => 'c',
-        _ => '?',
+        "Plantex" => Ok('a'),
+        "AVZ-Run" => Ok('b'),
+        "Space Game" => Ok('c'),
+        _ => Err("unknown group"),
     }
 }
