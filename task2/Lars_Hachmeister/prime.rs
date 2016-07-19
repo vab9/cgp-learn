@@ -13,11 +13,10 @@ fn main() {
 fn prime(a: i32) -> bool {
     let mut b = a;
     let c = b - 1;
-    let mut e = true;
     for i in 2..c {
         if b % i == 0 {
-            e = false;
+            return false;
         };
     }
-    e
+    true
 }
