@@ -2,14 +2,12 @@
 fn main() {
     println!("Gruppe {}", group_letter("Plantex"));
 }
-fn group_letter(a: &str) -> &str {
-    if a == "AVZRun" {
-        "a"
-    } else if a == "Plantex" {
-        "b"
-    } else if a == "SpaceGame" {
-        "c"
-    } else {
-        "Error: Unknow Group"
+fn group_letter(a: &str) -> char {
+    match a {
+        "AVZRun" => 'a',
+        "Plantex" => 'b',
+        "SpaceGame" => 'c',
+        _ => 'x',
     }
+
 }
