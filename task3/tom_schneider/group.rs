@@ -5,7 +5,7 @@ fn main() {
 }
 enum Group {
     Plantex,
-    AVZRun,
+    AvzRun,
     SpaceGame,
 }
 
