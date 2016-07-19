@@ -2,7 +2,7 @@ fn main() {
     let mut n = 0;
     let mut i = 0;
     while i < 20 {
-        if is_prime(n) == true {
+        if is_prime(n) {
             println!("{}", n);
             i += 1;
         }
