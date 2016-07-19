@@ -1,7 +1,7 @@
 fn main() {
     // collatzen
     for i in 1..21 {
-        println!("{:?} -> {:?}", i, collatz(i));
+        println!("{} -> {}", i, collatz(i));
     }
 }
 
