@@ -27,7 +27,7 @@ fn main() {
 // }
 
 /// Variante mit if
-fn timelygreetingif(x: u8) -> &'static str {
+fn timely_greeting_if(x: u8) -> &'static str {
     // static Vorschlag von Compiler
     if x >= 8 && x <= 12 {
         "Guten Morgen"
@@ -39,7 +39,7 @@ fn timelygreetingif(x: u8) -> &'static str {
 }
 
 /// Variante mit match
-fn timelygreetingmatch(x: u8) -> &'static str {
+fn timely_greeting_match(x: u8) -> &'static str {
     match x {
         8...12 => "Guten Morgen",
         18...22 => "Guten Abend",
