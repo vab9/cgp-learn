@@ -16,6 +16,5 @@ fn group_letter(name: Group) -> char {
         Group::AvzRun => 'A',
         Group::SpaceGame => 'B',
         Group::Plantex => 'C',
-    };
-    letter
+    }
 }

@@ -5,15 +5,12 @@ fn main() {
     println!("{}", time(4));
 }
 
-fn time(hour: u8) -> std::string::String {
-    if hour >= 8 && hour <= 12 {
-        "Guten Morgen".to_string()
-    } else if hour >= 18 && hour <= 22 {
-        "Guten Abend".to_string()
-    } else if hour >= 0 && hour <= 5 {
-        format!("Warum bist du denn um {} Uhr noch wach?", hour)
-    } else {
-        "Hallo".to_string()
+fn time(hour: u8) -> String {
+    match hour {
+        8...12 => "Guten Morgen".to_string(),
+        18...22 => "Guten Abend".to_string(),
+        0...5 => format!("Warum bist du denn um {} Uhr noch wach?", hour),
+        _ => "Hallo".to_string(),
     }
 
 }
