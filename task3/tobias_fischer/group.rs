@@ -1,3 +1,4 @@
+/// Displays letter corresponding with its group
 fn main() {
 
     println!("{}", group_letter(Group::Plantex));

@@ -1,9 +1,9 @@
+/// Displays greetings based on time
 fn main() {
     for i in 0..23 {
         println!("{}", greetings(i));
     }
 }
-
 
 fn greetings(t: u8) -> String {
     if t <= 5 {
