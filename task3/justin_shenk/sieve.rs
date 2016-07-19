@@ -1,4 +1,4 @@
-// Sieve of Eratosthenes
+// (Not the) Sieve of Eratosthenes
 fn main() {
     let vec = vec![1,2,3,5,7,11,13,17,19];
     assert_eq!(vec, return_primes(20));
