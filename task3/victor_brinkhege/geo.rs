@@ -14,11 +14,7 @@ impl Point {
     }
 
     fn is_origin(&self) -> bool {
-        if self.x == 0.0 && self.y == 0.0 {
-            return true;
-        } else {
-            return false;
-        }
+        self.x == 0.0 && self.y == 0.0
     }
 
     fn distance(p1: Point, p2: Point) -> f32 {
