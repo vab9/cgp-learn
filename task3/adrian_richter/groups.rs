@@ -1,35 +1,22 @@
 #[derive(Debug)]
 enum Group {
     Plantex,
-    AVZRun,
+    AvzRun,
     SpaceGame,
 }
 
 fn main() {
-    let mut passed = true;
+    assert_eq!(group_letter(&Group::Plantex), 'c');
+    assert_eq!(group_letter(&Group::AvzRun), 'a');
+    assert_eq!(group_letter(&Group::SpaceGame), 'b');
 
-    if !(group_letter(&Group::Plantex) == 'c') {
-        passed = false;
-    };
-    if !(group_letter(&Group::AVZRun) == 'a') {
-        passed = false;
-    };
-    if !(group_letter(&Group::SpaceGame) == 'b') {
-        passed = false;
-    };
-
-    println!("{}",
-             if passed {
-                 "passed"
-             } else {
-                 "failed"
-             });
+    println!("klappt");
 }
 
 fn group_letter(a: &Group) -> char {
     match a {
         &Group::Plantex => 'c',
-        &Group::AVZRun => 'a',
+        &Group::AvzRun => 'a',
         &Group::SpaceGame => 'b',
     }
 }
