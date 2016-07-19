@@ -1,10 +1,10 @@
 fn main() {
-    println!("{:?}", timelygreetingif(0));
-    println!("{:?}", timelygreetingmatch(8));
-    println!("{:?}", timelygreetingif(12));
-    println!("{:?}", timelygreetingmatch(18));
-    println!("{:?}", timelygreetingif(22));
-    println!("{:?}", timelygreetingmatch(23));
+    println!("{:?}", timely_greeting_if(0));
+    println!("{:?}", timely_greeting_match(8));
+    println!("{:?}", timely_greeting_if(12));
+    println!("{:?}", timely_greeting_match(18));
+    println!("{:?}", timely_greeting_if(22));
+    println!("{:?}", timely_greeting_match(23));
 
 }
 
