@@ -1,21 +1,22 @@
 fn main() {
-    let mut z = 1;
     let mut counter = 1;
-    while z < 21 {
-        if is_prime(counter) == true {
-            println!("{}. Primzahl: {}", z, counter);
-            z = z + 1;
-        } else {}
-        counter = counter + 1;
+    for z in 1.. {
+        if is_prime(z) {
+            println!("{}. Primzahl: {}", counter, z);
+            counter += 1;
+            if counter == 21 {
+                break;
+            }
+        }
     }
 }
 
 fn is_prime(u: u32) -> bool {
-    let mut prime = true;
+    let prime = true;
 
     for i in 2..u {
         if u % i == 0 {
-            prime = false;
+            return false;
         }
     }
     prime
