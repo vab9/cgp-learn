@@ -13,8 +13,6 @@ fn main() {
 
 fn is_prime(n: u32) -> bool {
 
-    let mut prime = true;
-
     if n <= 3 {
         true
     } else if n % 2 == 0 || n % 3 == 0 {
@@ -22,11 +20,10 @@ fn is_prime(n: u32) -> bool {
     } else {
         for i in 4..n / 2 {
             if n % i == 0 {
-                prime = false;
-                break;
+                return false;
             }
         }
 
-        prime
+        true
     }
 }
