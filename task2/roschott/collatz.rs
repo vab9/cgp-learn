@@ -6,14 +6,13 @@ fn main() {
 }
 
 
-fn collatz(n: i32) -> i32 {
-    let mut x = n;
+fn collatz(mut n: i32) -> i32 {
     let mut i = 0;
-    while x != 1 {
-        x = if x % 2 == 0 {
-            x / 2
+    while n != 1 {
+        n = if n % 2 == 0 {
+            n / 2
         } else {
-            3 * x + 1
+            3 * n + 1
         };
         i += 1;
     }
