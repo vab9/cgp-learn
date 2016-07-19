@@ -1,10 +1,7 @@
 fn main() {
-
-
     for j in 1..20 {
         println!("{}", collatz(j));
     }
-
 }
 
 fn collatz(n: u32) -> u32 {
@@ -23,5 +20,4 @@ fn collatz(n: u32) -> u32 {
     }
 
     it
-
 }
