@@ -1,13 +1,17 @@
-fn main() {
-    println!("{}", group_letter("Plantex"));
+enum Game {
+    AvzRun,
+    Plantex,
+    SpaceShooter,
 }
 
-fn group_letter(name: &str) -> char {
+fn main() {
+    println!("{}", group_letter(Game::Plantex));
+}
+
+fn group_letter(name: Game) -> char {
     match name {
-        "AVZ Run" => 'a',
-        "Marble Folly" => 'b',
-        "Plantex" => 'c',
-        "Space Shooter" => 'd',
-        _ => 'e',
+        Game::AvzRun => 'a',
+        Game::SpaceShooter => 'b',
+        Game::Plantex => 'c',
     }
 }
