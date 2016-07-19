@@ -25,11 +25,22 @@ fn sieve(n: i32) -> Vec<i32> {
         }
     }
     let mut ergebnis = Vec::new();
-    // for iter in work {
-    for iter in 2..n {
-        if work[iter as usize] != 0 {
-            ergebnis.push(work[iter as usize]);
+    for iter in &work {
+        // ohne & würde man den Vector in die Schleife schieben
+        // so nur eine Referenz(richtiges Wort?)
+        if work[*iter as usize] != 0 {
+            // * hier um zu dereferenzieren , da "iter" hier
+            // eine Referent auf ein i32 ist, also ein &i32
+            ergebnis.push(work[*iter as usize]);
         }
     }
+
+    // ALT
+    // for iter in 2..n {
+    //     if work[iter as usize] != 0 {
+    //         ergebnis.push(work[iter as usize]);
+    //     }
+    // }
+
     ergebnis
 }
