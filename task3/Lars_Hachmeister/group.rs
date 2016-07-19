@@ -2,7 +2,7 @@
 
 fn main() {
     let a = group_letter(Group::Plantex);
-    println!("{}", a)
+    println!("{}", a);
 }
 
 enum Group {
