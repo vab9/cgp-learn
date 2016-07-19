@@ -16,5 +16,5 @@ fn prim(n: i32) -> bool {
         }
     }
 
-    return true;
+    true;
 }
