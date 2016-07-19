@@ -2,7 +2,7 @@
 fn sieve(number: usize) -> Vec<usize> {
 
     let n = number + 1;
-    let mut primes: Vec<bool> = vec![true; n];
+    let mut primes = vec![true; n];
     primes[0] = false;
     primes[1] = false;
     for i in 2..n {
