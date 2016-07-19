@@ -11,7 +11,7 @@ fn eras(n: u32) -> Vec<u32> {
     let mut arr = vec![false; n as usize];
     let mut v = Vec::new();
 
-    for t in 2..(n) {
+    for t in 2..n {
         if !arr[t as usize] {
             v.push(t);
             let mut i = t + t;
