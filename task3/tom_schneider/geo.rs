@@ -13,7 +13,7 @@ impl Point {
         Point { x: 0.0, y: 0.0 }
     }
     pub fn is_origin(&self) -> bool {
-        (self.x == 0.0 && self.y == 0.0)
+        self.x == 0.0 && self.y == 0.0
     }
     pub fn distance(&self, p: &Point) -> f32 {
         ((self.x - p.x) * (self.x - p.x) + (self.y - p.y) * (self.y - p.y)).sqrt()
@@ -35,7 +35,7 @@ impl Rectangle {
         self.ul.distance(&t).abs() * self.or.distance(&t).abs()
     }
     pub fn contains(&self, p: &Point) -> bool {
-        (p.x >= self.ul.x && p.y >= self.ul.y && p.x <= self.or.x && p.y <= self.or.y)
+        p.x >= self.ul.x && p.y >= self.ul.y && p.x <= self.or.x && p.y <= self.or.y
     }
 }
 
