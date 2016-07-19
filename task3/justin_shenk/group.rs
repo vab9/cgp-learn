@@ -1,8 +1,8 @@
 fn main() {
-    println!("{}",group_letter("Plantex"));
+    println!("{}", group_letter("Plantex"));
 }
 
-fn group_letter(g:&str) -> char {
+fn group_letter(g: &str) -> char {
 
     match g {
         "Plantex" => 'a',
