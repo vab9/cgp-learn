@@ -11,7 +11,7 @@ fn eratosthenes(n: u32) -> Vec<u32> {
         for j in 2..i - 1 {
             if i % j == 0 {
                 v[(i) as usize] = false;
-                continue;
+                break;
             }
         }
     }
