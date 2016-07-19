@@ -1,7 +1,6 @@
 
 
 fn main() {
-
     let a = group_letter(Group::Plantex);
     println!("{}", a)
 }
@@ -19,18 +18,4 @@ fn group_letter(name: Group) -> char {
         Group::Plantex => 'C',
     };
     letter
-
-
-
-
-    // let a = if name == "AVZ-Run" {
-    //     "A"
-    // } else if name == "Space Game" {
-    //     "B"
-    // } else if name == "Plantex" {
-    //     "C"
-    // } else {
-    //     "Z"
-    // }; // bei falscher eingabe
-    // a
 }
