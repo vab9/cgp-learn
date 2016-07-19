@@ -11,10 +11,9 @@ enum Group {
 }
 
 fn group_letter(x: Group) -> char {
-    let letter = match x {
+    match x {
         Group::Plantex => 'c',
         Group::AvzRun => 'a',
         Group::SpaceGame => 'b',
     };
-    letter
 }
