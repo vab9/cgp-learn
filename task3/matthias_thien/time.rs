@@ -1,9 +1,7 @@
 fn main() {
-    let time: [u8; 4] = [3, 7, 9, 19];
-    println!("{}", message(time[0]));
-    println!("{}", message(time[1]));
-    println!("{}", message(time[2]));
-    println!("{}", message(time[3]));
+    for time in &[3, 7, 9, 19] {
+        println!("{}", message(*time));
+    }
 }
 fn message(input: u8) -> String {
     match input {
