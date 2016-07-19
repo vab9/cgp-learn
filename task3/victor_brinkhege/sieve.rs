@@ -6,13 +6,12 @@ fn sieve(number: usize) -> Vec<usize> {
     primes[0] = false;
     primes[1] = false;
     for i in 2..n {
-        for j in 2..n {
-            if i != j {
-                if j % i == 0 {
-                    primes[j] = false;
-                }
-            }
-
+        let mut increment = 2;
+        let mut multiple = i * increment;
+        while multiple <= n {
+            primes[multiple] = false;
+            increment += 1;
+            multiple = i * increment;
         }
     }
 
