@@ -15,7 +15,7 @@ fn collatz(n: i32) -> i32 {
         } else {
             3 * x + 1
         };
-        i = i + 1;
+        i += 1;
     }
-    (i)
+    i
 }
