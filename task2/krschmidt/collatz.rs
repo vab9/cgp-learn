@@ -15,9 +15,8 @@ fn main() {
 }
 
 
-fn collatz(n: i32) -> i32 {
+fn collatz(mut n: i32) -> i32 {
     let mut count = 0;
-    let mut n = n;
     while n > 1 {
         n = if n%2 == 0 {
             n/2

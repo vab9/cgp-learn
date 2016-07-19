@@ -12,7 +12,7 @@ fn main() {
         .expect("Please type a number!");
 
     for i in 0..n+1 {
-        if !is_prime(i) {
+        if is_prime(i) {
             print!("{} ", i);
         }
     }
@@ -21,7 +21,7 @@ fn main() {
 
 
 fn is_prime(n: i32) -> bool {
-    dividable(n, 2)
+    !dividable(n, 2)
 }
 
 fn dividable(n: i32, d: i32) -> bool {
