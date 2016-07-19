@@ -6,9 +6,27 @@ Aufgabe 4: Pfade, Traits und solche Sachen
 Schreibt eine Funktion, welche zwei Parameter eines "beliebigen" Types nimmt und dann die Summe UND das Produkt zurück gibt.
 
 
-### 4.2 Toller Taschenrechner
+### 4.2 Swagger
 
-a) Implementiert einen Taschenrechner `calc.rs`, der eine einfache Rechnung über die Kommandozeile einließt und das Ergebnis ausgibt. Die Benutzung soll so aussehen:
+Erstellt einen Typen, `Swagger`, der einen anderen Typen, welcher `Display` implementiert, in sich speichert. Euer Typ soll selber `Display` implementieren: Wenn er ausgegeben wird, soll er erst "#swag", dann die Ausgabe des in sich gespeicherten Objektes und dann "#yolo" ausgeben.
+
+
+### 4.3 Fibonacci
+
+Erstellt einen Typen, der das Trait `Iterator` aus der Standardbibliothek imlpementiert. Euer Typ soll ein Iterator über die Zahlen der Fibonacci Reihe sein. Also bei diesem Code:
+
+```rust
+for i in YourType::new().take(20) {
+    println!("{}", i);
+}
+```
+
+...sollen die ersten 20 Fibonacci Zahlen ausgegeben werden.
+
+
+### 4.4 Toller Taschenrechner (Zusatzaufgabe)
+
+Implementiert einen Taschenrechner `calc.rs`, der eine einfache Rechnung über die Kommandozeile einließt und das Ergebnis ausgibt. Die Benutzung soll so aussehen:
 
 ```bash
 $ ./calc 3 + 4
@@ -22,23 +40,3 @@ I can't calculate this :(
 ```
 
 An die CLI-Parameter kommt man mit Hilfe von `std::env::args()`, hilfreich wird auch  Als Operation ist nur '+' und '-' erlaubt und es gibt immer nur zwei Operanden (d.h. "eine Rechnung").
-
-b) Erweitert das Programm so, dass man beliebig viele Operationen angeben kann. Also ist `$ ./calc 1 + 2 + 3 + 4 + 5 - 10` ein gültiger Aufruf.
-
-
-### 4.3 Swagger
-
-Erstellt einen Typen, `Swagger`, der einen anderen Typen, welcher `Display` implementiert, in sich speichert. Euer Typ soll selber `Display` implementieren: Wenn er ausgegeben wird, soll er erst "#swag", dann die Ausgabe des in sich gespeicherten Objektes und dann "#yolo" ausgeben.
-
-
-### 4.4 Fibonacci
-
-Erstellt einen Typen, der das Trait `Iterator` aus der Standardbibliothek imlpementiert. Euer Typ soll ein Iterator über die Zahlen der Fibonacci Reihe sein. Also bei diesem Code:
-
-```rust
-for i in YourType::new().take(20) {
-    println!("{}", i);
-}
-```
-
-...sollen die ersten 20 Fibonacci Zahlen ausgegeben werden.
