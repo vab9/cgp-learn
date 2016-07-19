@@ -1,10 +1,9 @@
 fn main() {
     let result = group_letter("Plantex");
 
-    if result.is_ok() {
-        println!("Gruppe: {}", result.unwrap());
-    } else {
-        println!("Keine Gruppe gefunden!");
+    match result {
+        Ok(v) => println!("Gruppe: {}", v),
+        Err(e) => println!("{}", e),
     }
 }
 
