@@ -14,17 +14,27 @@ fn sieve(n: usize) -> Vec<usize> {
         gestrichen.push(false);
     }
 
-    for i in 2..n / 2 {
-        for j in 2..gestrichen.len() as usize + 2 {
-            if j != i && j % i == 0 {
+    let fsqrt = (n as f64).sqrt();
+    let nsqrt = fsqrt as usize;
+
+    for i in 2..nsqrt {
+        if !gestrichen[i - 2] {
+            primes.push(i);
+
+            let mut j: usize = i * 2;
+
+            // streiche die vielfachen von i, beginnend mit i*2
+            while j < (n - 1) {
                 gestrichen[j - 2] = true;
+
+                j += i;
             }
         }
     }
 
-    for i in 0..gestrichen.len() {
-        if !gestrichen[i] {
-            primes.push(i + 2);
+    for i in (nsqrt + 1)..(n - 1) {
+        if !gestrichen[i - 2] {
+            primes.push(i);
         }
     }
 
