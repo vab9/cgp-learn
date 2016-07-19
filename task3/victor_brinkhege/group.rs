@@ -1,9 +1,9 @@
-fn group_letter(name: &str) -> char {
+fn group_letter(name: &str) -> Option<char> {
     match name {
-        "Plantex" => 'c',
-        "AVZ-Run" => 'a',
-        "Space Game" => 'b',
-        _ => 'x',
+        "Plantex" => Some('c'),
+        "AVZ-Run" => Some('a'),
+        "Space Game" => Some('b'),
+        _ => None,
     }
 }
 
@@ -11,6 +11,6 @@ fn group_letter(name: &str) -> char {
 
 
 fn main() {
-    println!("Plantex -> {}", group_letter("Plantex"));
-    println!("AVZ-Run -> {}", group_letter("AVZ-Run"));
+    println!("Plantex -> {:?}", group_letter("Plantex"));
+    println!("AVZ-Run -> {:?}", group_letter("AVZ-Run"));
 }

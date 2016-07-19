@@ -38,11 +38,7 @@ impl Rectangle {
     }
 
     fn contains(&self, p: Point) -> bool {
-        if p.x > self.a.x && p.x < self.b.x && p.y > self.a.y && p.y < self.b.y {
-            return true;
-        } else {
-            return false;
-        }
+        p.x > self.a.x && p.x < self.b.x && p.y > self.a.y && p.y < self.b.y
     }
 }
 
