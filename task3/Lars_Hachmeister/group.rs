@@ -12,7 +12,7 @@ enum Group {
 }
 
 fn group_letter(name: Group) -> char {
-    let letter = match name {
+    match name {
         Group::AvzRun => 'A',
         Group::SpaceGame => 'B',
         Group::Plantex => 'C',
