@@ -1,6 +1,6 @@
 fn main() {
-    let a: u8 = 4;
-    println!("{}", get_time(a));
+
+    println!("{}", get_time(4));
 }
 fn get_time(time: u8) -> String {
     match time {
