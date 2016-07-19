@@ -1,12 +1,7 @@
 fn main() {
-
-
     for n in 1..21 {
         println!("N = {} Iterationen {}", n, collatz(n));
     }
-
-
-
 }
 
 fn collatz(mut x: u32) -> u32 {
