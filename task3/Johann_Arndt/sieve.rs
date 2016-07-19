@@ -1,7 +1,6 @@
 fn main() {
-    let n = 100;
-    let res = sieb(n);
-    for i in res {
+
+    for i in sieb(100) {
         println!("{}", i);
     }
 }
