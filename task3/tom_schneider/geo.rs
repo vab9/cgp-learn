@@ -34,7 +34,7 @@ impl Rectangle {
         let t = Point::new(x, y);
         (((self.ul.distance(&t)).abs()) * (self.or.distance(&t).abs()))
     }
-    pub fn contains(&self, p: Point) -> bool {
+    pub fn contains(&self, p: &Point) -> bool {
         (p.x >= self.ul.x && p.y >= self.ul.y && p.x <= self.or.x && p.y <= self.or.y)
     }
 }
@@ -46,7 +46,7 @@ fn main() {
     println!("{}", a.distance(&b));
     let c = Rectangle::new(Point::origin(), Point::new(10.0, 10.0));
     println!("{}", c.area());
-    println!("{}", c.contains(Point::new(5.0, 5.0)));
+    println!("{}", c.contains(&Point::new(5.0, 5.0)));
 
-    println!("{}", c.contains(Point::new(11.0, 11.0)));
+    println!("{}", c.contains(&Point::new(11.0, 11.0)));
 }
