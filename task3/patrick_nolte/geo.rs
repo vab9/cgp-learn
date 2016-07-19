@@ -5,8 +5,8 @@ struct Point {
 }
 
 impl Point {
-    pub fn new() -> Point {
-        Point::origin()
+    pub fn new(x: f32, y: f32) -> Point {
+        Point { x: x, y: y }
     }
     pub fn origin() -> Point {
         Point { x: 0.0, y: 0.0 }
@@ -51,9 +51,7 @@ impl Rectangle {
 }
 
 fn main() {
-    let mut p = Point::new();
-    p.x = 1.0;
-    p.y = 1.0;
+    let p = Point::new(1.0, 1.0);
     println!("{:?}", Point::origin());
     println!("{:?}", p.is_origin());
     println!("{:?}", Point::distance(&p, &Point::origin()));
