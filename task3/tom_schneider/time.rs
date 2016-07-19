@@ -1,12 +1,8 @@
 fn main() {
-    let mut a: u8 = 4;
-    println!("{}", greet(a));
-    a = 10;
-    println!("{}", greet(a));
-    a = 19;
-    println!("{}", greet(a));
-    a = 13;
-    println!("{}", greet(a));
+    println!("{}", greet(4));
+    println!("{}", greet(10));
+    println!("{}", greet(19));
+    println!("{}", greet(13));
 }
 
 fn greet(time: u8) -> String {

@@ -8,16 +8,14 @@ fn main() {
 
 
 fn eras(n: u32) -> Vec<u32> {
-    let mut arr = Vec::new();
+    let mut arr = vec![false; (n+1) as usize];
     let mut v = Vec::new();
-    for _ in 0..(n + 1) {
-        arr.push(false);
-    }
+
     for t in 2..(n + 1) {
-        if arr[t as usize] != true {
+        if !arr[t as usize] {
             v.push(t);
             let mut i = t + t;
-            while i < (n + 1) {
+            while i <= n {
                 arr[i as usize] = true;
                 i = i + t;
             }
