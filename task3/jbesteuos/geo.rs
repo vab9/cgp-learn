@@ -15,11 +15,8 @@ impl Point {
     }
 
     pub fn is_origin(&self) -> bool {
-        if self.x == 0.0 && self.y == 0.0 {
-            return true;
-        } else {
-            false
-        }
+        self.x == 0.0 && self.y == 0.0
+
     }
 
     pub fn distance(m: Point, n: Point) -> f32 {
@@ -52,13 +49,9 @@ impl Rectangle {
 
     pub fn contains(&self, point: Point) -> bool {
 
-        if self.topleft.x <= point.x && self.topleft.y <= point.y &&
-           self.len + self.topleft.x >= point.x &&
-           self.high + self.topleft.y >= point.y {
-            return true;
-        } else {
-            false
-        }
+        self.topleft.x <= point.x && self.topleft.y <= point.y &&
+        self.len + self.topleft.x >= point.x && self.high + self.topleft.y >= point.y
+
 
     }
 }
