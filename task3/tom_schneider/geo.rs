@@ -1,5 +1,4 @@
 #[derive(Debug)]
-
 struct Point {
     x: f32,
     y: f32,
@@ -15,8 +14,8 @@ impl Point {
     pub fn is_origin(&self) -> bool {
         self.x == 0.0 && self.y == 0.0
     }
-    pub fn distance(&self, p: &Point) -> f32 {
-        ((self.x - p.x) * (self.x - p.x) + (self.y - p.y) * (self.y - p.y)).sqrt()
+    pub fn distance(p1: &Point, p2: &Point) -> f32 {
+        ((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y)).sqrt()
     }
 }
 
@@ -32,7 +31,7 @@ impl Rectangle {
         let x = self.or.x;
         let y = self.ul.y;
         let t = Point::new(x, y);
-        self.ul.distance(&t).abs() * self.or.distance(&t).abs()
+        Point::distance(&self.ul, &t).abs() * Point::distance(&self.or, &t).abs()
     }
     pub fn contains(&self, p: &Point) -> bool {
         p.x >= self.ul.x && p.y >= self.ul.y && p.x <= self.or.x && p.y <= self.or.y
@@ -43,7 +42,7 @@ fn main() {
     let a = Point::new(10.0, 10.0);
     let b = Point::origin();
     println!("{}", b.is_origin());
-    println!("{}", a.distance(&b));
+    println!("{}", Point::distance(&a, &b));
     let c = Rectangle::new(Point::origin(), Point::new(10.0, 10.0));
     println!("{}", c.area());
     println!("{}", c.contains(&Point::new(5.0, 5.0)));
