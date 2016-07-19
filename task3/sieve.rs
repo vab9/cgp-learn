@@ -16,8 +16,7 @@ fn sieve(n: i32) -> Vec<i32> {
     work[1 as usize] = 0;
     for iter in 2..n {
         if work[iter as usize] != 0 {
-            let mut demo = iter;
-            demo += iter;
+            let mut demo = 2 * iter;
             while demo < n {
                 work[demo as usize] = 0;
                 demo += iter;
