@@ -8,7 +8,7 @@ fn main() {
     }
 }
 
-fn siev(n: i32) -> Vec<i32> {
+fn siev(n: i32) -> Vec<u32> {
     let mut siev = Vec::new();
 
     for x in 0..n - 2 {
