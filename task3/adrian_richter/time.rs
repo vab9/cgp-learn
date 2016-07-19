@@ -5,17 +5,10 @@ fn main() {
 }
 
 fn greet_me(time: u8) -> String {
-    if time <= 24 {
-        if time <= 12 && time >= 8 {
-            "Guten Morgen".to_string()
-        } else if time <= 22 && time >= 18 {
-            "Guten Abend".to_string()
-        } else if time <= 5 {
-            format!("Warum bist du denn um {} Uhr noch wach?", time)
-        } else {
-            "Hallo".to_string()
-        }
-    } else {
-        "invalid Time".to_string()
+    match time {
+        8...12 => "Guten Morgen".to_string(),
+        18...22 => "Guten Abend".to_string(),
+        0...5 => format!("Warum bist du denn um {} Uhr noch wach?", time),
+        _ => "Hallo".to_string(),
     }
 }
