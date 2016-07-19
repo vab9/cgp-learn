@@ -7,14 +7,14 @@ fn main() {
 fn group_letter(name: Game) -> char {
 
     match name {
-        Game::AVZRun => 'A',
+        Game::AvzRun => 'A',
         Game::SpaceGame => 'B',
         Game::Plantex => 'C',
     }
 }
 
 enum Game {
-    AVZRun,
+    AvzRun,
     SpaceGame,
     Plantex,
 }
