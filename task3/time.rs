@@ -9,7 +9,7 @@ fn main() {
     println!("awake at {} => {}", c, get_gretting(c));
 }
 
-fn get_gretting(hour :u8) -> Cow<'static, str>{
+fn get_gretting(hour: u8) -> Cow<'static, str> {
     match hour {
         0...5 => Cow::Owned(format!("why are you still awake at {} am", hour)),
         8...12 => Cow::Borrowed("Good morning"),
