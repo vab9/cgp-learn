@@ -25,7 +25,28 @@ struct Rectangle {
 }
 impl Rectangle {
     pub fn new(x: Point, y: Point) -> Rectangle {
-        Rectangle { ul: x, or: y }
+        Rectangle {
+            ul: Point::new(if x.x <= y.x {
+                               x.x
+                           } else {
+                               y.x
+                           },
+                           if x.y <= y.y {
+                               x.y
+                           } else {
+                               y.y
+                           }),
+            or: Point::new(if x.x > y.x {
+                               x.x
+                           } else {
+                               y.x
+                           },
+                           if x.y > y.y {
+                               x.y
+                           } else {
+                               y.y
+                           }),
+        }
     }
     pub fn area(&self) -> f32 {
         let x = self.or.x;
