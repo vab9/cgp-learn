@@ -1,8 +1,7 @@
 fn main() {
-    println!("{:?}", collatz(1));
-    println!("{:?}", collatz(2));
-    println!("{:?}", collatz(3));
-    println!("{:?}", collatz(4));
+    for current in 1..21 {
+        println!("Collatz für: {} {}", current, collatz(current));
+    }
 }
 
 fn collatz(mut n: i32) -> i32 {
