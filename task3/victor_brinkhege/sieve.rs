@@ -1,25 +1,33 @@
 
-fn sieve(n: usize) -> Vec<usize> {
-    let mut vec = Vec::new();
-    let mut array = [2; n + 1];
-    for i in 2..n + 1 {
-        vec.push(i);
-    }
+fn sieve(number: usize) -> Vec<usize> {
 
-    for i in vec.len() {
-
-    }
-
-    for t in vec.iter() {
-        for x in vec.into_iter() {
-            if x % t == 0 {
-                vec.remove(x);
+    let n = number + 1;
+    let mut primes: Vec<bool> = vec![true; n];
+    primes[0] = false;
+    primes[1] = false;
+    for i in 2..n {
+        for j in 2..n {
+            if i != j {
+                if j % i == 0 {
+                    primes[j] = false;
+                }
             }
+
         }
     }
-    return vec;
+
+    let mut vector = Vec::new();
+
+    for i in 0..primes.len() {
+        if primes[i] {
+            vector.push(i);
+        }
+    }
+
+    vector
+
 }
 
 fn main() {
-    println!("{:?}", sieve(37));
+    println!("{:?}", sieve(100));
 }
