@@ -13,10 +13,10 @@ fn main() {
     }
 }
 fn is_prime(n: i32) -> bool {
-    let mut isprime = true;
+    let isprime = true;
     for i in 2..n / 2 + 1 {
         if n % i == 0 {
-            isprime = false
+            return false;
         }
     }
     isprime
