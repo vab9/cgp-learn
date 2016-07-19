@@ -9,7 +9,7 @@ fn main() {
 
 }
 
-fn collatz(mut x: u32) -> (u32) {
+fn collatz(mut x: u32) -> u32 {
     let mut i = 0;
 
     while x != 1 {
