@@ -12,12 +12,10 @@ fn main() {
 }
 
 fn is_prime(u: u32) -> bool {
-    let prime = true;
-
     for i in 2..u {
         if u % i == 0 {
             return false;
         }
     }
-    prime
+    true
 }
