@@ -12,7 +12,7 @@ fn main() {
 
 /// Implement sieve of Eratosthenes
 fn sieve(n: u32) -> Vec<u32> {
-    let mut numbers = Vec::new();   //Hold true for index if possible prime number
+    let mut numbers = Vec::with_capacity(n as usize);   //Hold true for index if possible prime number
 
     // calculate upper boarder to which we need to count in the sieve
     let b = (n as f32).sqrt().ceil() as u32;
