@@ -1,18 +1,16 @@
 fn main() {
     let n = 100;
-    let liste = sieb(&vec![true; n]);
-
-    for i in 0..n {
-        if liste[i] {
-            println!("{}", i);
-        }
+    let res = sieb(n);
+    for i in res {
+        println!("{}", i);
     }
 }
 
-fn sieb(todo: &Vec<bool>) -> Vec<bool> {
+fn sieb(n: u32) -> Vec<u32> {
+    let mut liste = vec![true; n as usize];
     let mut i = 2;
-    let mut liste = todo.clone();
-    while i > 1 && i + 1 < liste.len() {
+
+    while i > 1 && i + 1 < liste.len() && liste[i] == true {
         for j in i + 1..liste.len() {
             if j % i == 0 {
                 liste[j] = false;
@@ -21,5 +19,11 @@ fn sieb(todo: &Vec<bool>) -> Vec<bool> {
         i += 1;
     }
 
-    liste
+    let mut res = Vec::new();
+    for k in 1..n {
+        if liste[k as usize] {
+            res.push(k);
+        }
+    }
+    res
 }

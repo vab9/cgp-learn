@@ -12,11 +12,7 @@ impl Point {
         Point { x: 0.0, y: 0.0 }
     }
     pub fn is_origin(&self) -> bool {
-        if self.x == 0.0 && self.y == 0.0 {
-            true
-        } else {
-            false
-        }
+        self.x == 0.0 && self.y == 0.0
     }
     pub fn distance(&self, p: &Point) -> f32 {
         let distx = self.x - p.x;
