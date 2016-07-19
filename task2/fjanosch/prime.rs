@@ -5,7 +5,7 @@ fn main() {
         iter += 1;
         let a = is_prime(iter);
         if a == true {
-            count = count - 1;
+            count -= 1;
             println!("{} is prime!", iter);
         }
     }
@@ -18,4 +18,5 @@ fn is_prime(input: i32) -> (bool) {
             return false;
         }
     }
+    rly_prime
 }
