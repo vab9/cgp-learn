@@ -1,16 +1,10 @@
 fn main() {
     let result = sieve(100);
     println!("{:?}", result);
-
-    for i in 2..result.len() {
-        if result[i] {
-            println!("{} is prime", i);
-        }
-    }
 }
 
 /// Gibt einen Vektor zurück, der für jede Zahl an deren Index speichert ob sie prim ist.
-fn sieve(n: usize) -> Vec<bool> {
+fn sieve(n: usize) -> Vec<usize> {
     let mut sieve = vec![true; n];
 
     // Manuell 0 und 1 als nicht-prim markieren
@@ -30,5 +24,11 @@ fn sieve(n: usize) -> Vec<bool> {
         }
     }
 
-    sieve
+    sieve.iter().enumerate().filter_map(|(i, &prime)| {
+        if prime {
+            Some(i)
+        } else {
+            None
+        }
+    }).collect()
 }
