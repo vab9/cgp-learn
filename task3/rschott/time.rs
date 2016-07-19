@@ -1,20 +1,16 @@
 
 
 fn main() {
-    let mut n: u8 = 0;
-    while n < 24 {
-        println!("It\'s {} o\'clock, {}", n, &clock(n));
-        n += 1;
+    for n in 0..23 {
+        println!("It\'s {} o\'clock, {}", n, clock(n));
     }
 }
 
 fn clock(n: u8) -> String {
-    if n >= 8 && n <= 12 {
-        "Guten Morgen".to_string()
-    } else if n >= 18 && n <= 22 {
-        "Guten Abend".to_string()
-    } else {
-        "Hallo".to_string()
+    match n {
+        8...12 => "Guten Morgen".to_string(),
+        18...22 => "Guten Abend".to_string(),
+        0...5 => format!("Warum bist du denn um {} noch wach", n).to_string(),
+        _ => "Hallo".to_string(),
     }
-
 }
