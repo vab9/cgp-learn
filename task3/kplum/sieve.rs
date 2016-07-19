@@ -11,7 +11,7 @@ fn erastosthenes(n: u32) -> Vec<u32> {
     }
 
     for zeiger in 2..n / 2 {
-        if prime[zeiger as usize] == true {
+        if prime[zeiger as usize] {
             let mut x = zeiger + zeiger;
             while x <= n {
                 prime[x as usize] = false;
@@ -22,7 +22,7 @@ fn erastosthenes(n: u32) -> Vec<u32> {
 
     let mut result = Vec::new();
     for i in 0..n + 1 {
-        if prime[i as usize] == true {
+        if prime[i as usize] {
             result.push(i);
         }
     }
