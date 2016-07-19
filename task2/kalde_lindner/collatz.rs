@@ -21,7 +21,7 @@ fn collatz(mut n: u32) -> (u32) {
                 n * 3 + 1
             }
         };
-        i = i + 1;
+        i += 1;
 
     }
     i
