@@ -14,10 +14,8 @@ fn streichen(n: usize) -> Vec<usize> {
     }
     for t in 2..n + 1 {
         for i in 0..vec.len() {
-            if vec[i] != t {
-                if vec[i] % t == 0 {
-                    del[i] = true;
-                }
+            if vec[i] != t && vec[i] % t == 0 {
+                del[i] = true;
             }
         }
     }
@@ -25,10 +23,8 @@ fn streichen(n: usize) -> Vec<usize> {
     while i < vec.len() {
         if del[i] == false {
             result.push(vec[i]);
-            i += 1;
-        } else {
-            i += 1;
         }
+        i += 1;
     }
     result
 }
