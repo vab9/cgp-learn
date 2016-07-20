@@ -87,10 +87,7 @@ impl Rectangle {
         };
 
         // finally: compare
-        if p.x > lower_x && p.x < upper_x && p.y > lower_y && p.y < upper_y {
-            true
-        } else {
-            false
-        }
+        p.x > lower_x && p.x < upper_x && p.y > lower_y && p.y < upper_y
+
     }
 }
