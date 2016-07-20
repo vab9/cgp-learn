@@ -1,6 +1,6 @@
 struct MyType {
-    current: usize,
-    next: usize,
+    current: u32,
+    next: u32,
 }
 
 impl MyType {
@@ -13,9 +13,9 @@ impl MyType {
 }
 
 impl Iterator for MyType {
-    type Item = usize;
+    type Item = u32;
 
-    fn next(&mut self) -> Option<usize> {
+    fn next(&mut self) -> Option<u32> {
         let following = self.current + self.next;
 
         self.current = self.next;
