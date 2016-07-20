@@ -1,11 +1,7 @@
+use std::ops::{Add, Mul};
 
-// TODO
-
-fn foo<T: std::ops::Add + std::ops::Mul>
-    (x: T,
-     y: T)
-     -> (<T as std::ops::Add>::Output, <T as std::ops::Mul>::Output) {
-    ((x + y), (x * y))
+fn foo<T: Add + Mul + Copy>(x: T, y: T) -> (<T as Add>::Output, <T as Mul>::Output) {
+    (x + y, x * y)
 }
 
 
