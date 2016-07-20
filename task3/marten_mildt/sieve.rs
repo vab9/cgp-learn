@@ -21,7 +21,7 @@ fn sieve(n: usize) -> Vec<usize> {
         if !gestrichen[i - 2] {
             primes.push(i);
 
-            let mut j: usize = i * 2;
+            let mut j = i * 2;
 
             // streiche die vielfachen von i, beginnend mit i*2
             while j < (n - 1) {
