@@ -6,6 +6,10 @@ fn main() {
     println!("{}", distance(&q, &p));
 
     let r = Rectangle::new(p, q);
+    let s = Point::new(3.0, 3.0);
+
+    println!("{}", r.area());
+    println!("{}", r.contains(&s));
 }
 
 struct Point {
@@ -50,5 +54,10 @@ impl Rectangle {
 
     pub fn area(&self) -> f32 {
         (self.length * self.width).abs()
+    }
+
+    pub fn contains(&self, p: &Point) -> bool {
+        (((p.x <= self.p1.x && p.x >= self.p2.x) || (p.x >= self.p1.x && p.x <= self.p2.x)) &&
+         ((p.y <= self.p1.y && p.y >= self.p2.y) || (p.y >= self.p1.y && p.y <= self.p2.y)))
     }
 }
