@@ -1,6 +1,9 @@
 fn main() {
     let p = Point::new(3.0, 1.0);
     let o = Point::origin();
+    let r = Rectangle::new(p, o);
+    let x = r.area();
+    println!("{:?}", x);
 
 }
 
@@ -65,7 +68,9 @@ impl Rectangle {
                     return true;
                 }
             }
+            // } else if A.x > B.x {
         } else if A.x > B.x {
+
             if A.y < B.y {
                 if p.y > A.y && p.y < B.y && p.x > A.x && p.x < B.x {
                     return true;
@@ -76,5 +81,6 @@ impl Rectangle {
                 }
             }
         }
+        false
     }
 }
