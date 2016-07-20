@@ -4,34 +4,38 @@ fn main() {
     let r = Rectangle::new(p, o);
     let x = r.area();
     println!("{:?}", x);
+    let c = Point::new(2.0, 0.5);
+    let d = Point::new(0.0, -2.0);
+    println!("{}", r.contains(c));
+    println!("{}", r.contains(d));
 
 }
 
 #[derive(Debug)]
 struct Point {
-    X: f32,
-    Y: f32,
+    x: f32,
+    y: f32,
 }
 
 impl Point {
     pub fn origin() -> Point {
-        Point { X: 0.0, Y: 0.0 }
+        Point { x: 0.0, y: 0.0 }
     }
 
     pub fn new(a: f32, b: f32) -> Point {
-        Point { X: a, Y: b }
+        Point { x: a, y: b }
     }
 
     pub fn is_origin(&self) -> bool {
-        if self.X == 0.0 && self.Y == 0.0 {
+        if self.x == 0.0 && self.y == 0.0 {
             return true;
         }
         false
     }
 
-    fn distance(a: Point, b: Point) {
-        let x = a.X - b.X;
-        let y = a.Y - b.Y;
+    fn distance(a: Point, b: Point) -> f32 {
+        let x = a.x - b.x;
+        let y = a.y - b.y;
         (x * x + y * y).sqrt()
     }
 }
@@ -48,8 +52,8 @@ impl Rectangle {
     }
 
     pub fn area(&self) -> f32 {
-        let x = A.x - B.x;
-        let y = A.y - B.y;
+        let x = self.A.x - self.B.x;
+        let y = self.A.y - self.B.y;
         let mut area = x * y;
         if area < 0.0 {
             area = -area;
@@ -57,30 +61,31 @@ impl Rectangle {
         area
     }
 
+    // min und max aus std würde das verbessern
     pub fn contains(&self, p: Point) -> bool {
-        if A.x < B.x {
-            if A.y < B.y {
-                if p.y > A.y && p.y < B.y && p.x < A.x && p.x > B.x {
+        if self.A.x < self.B.x {
+            if self.A.y < self.B.y {
+                if p.y > self.A.y && p.y < self.B.y && p.x > self.A.x && p.x < self.B.x {
                     return true;
                 }
-            } else if A.y > B.y {
-                if p.y < A.y && p.y > B.y && p.x < A.x && p.x > B.x {
+            } else if self.A.y > self.B.y {
+                if p.y < self.A.y && p.y > self.B.y && p.x > self.A.x && p.x < self.B.x {
                     return true;
                 }
             }
-            // } else if A.x > B.x {
-        } else if A.x > B.x {
+        } else if self.A.x > self.B.x {
 
-            if A.y < B.y {
-                if p.y > A.y && p.y < B.y && p.x > A.x && p.x < B.x {
+            if self.A.y < self.B.y {
+                if p.y > self.A.y && p.y < self.B.y && p.x < self.A.x && p.x > self.B.x {
                     return true;
                 }
-            } else if A.y > B.y {
-                if p.y < A.y && p.y > B.y && p.x > A.x && p.x < B.x {
+            } else if self.A.y > self.B.y {
+                if p.y < self.A.y && p.y > self.B.y && p.x < self.A.x && p.x > self.B.x {
                     return true;
                 }
             }
         }
         false
+
     }
 }
